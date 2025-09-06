@@ -16,4 +16,16 @@ function reverseString(string) {
     return string.split('').reverse().join("");
 }
 
-console.log(reverseString("Hello"));
+function palindromeChecker(stringArr) {
+    for (let word of stringArr) {
+        if (word === reverseString(word)) {
+            console.log(`The word ${word} is a palindrome!`);
+        } else {
+            console.log(`The word ${word} is NOT a palindrome!`);
+        }
+    }
+}
+
+let testArray = ["moon", "mom", "tacocat", "adobo", "agog", "kayak", "bikini", "banana", "level", "garage", "deified", "angora", "radar", "rotator"];
+
+palindromeChecker(testArray);
